@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from newsapi import NewsApiClient
 def Headlines_view(request,*args, **kwargs):
     newsapi = NewsApiClient(api_key = "8e9afb8804be404fb277c28fb68d340c")
-    topTechHeadlines = newsapi.get_top_headlines(category = "technology", language = "en")
-    topBusinessHeadlines = newsapi.get_top_headlines(category = "business", language = "en")
-    topSportsHeadlines = newsapi.get_top_headlines(category = "sports", language = "en")
+    topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
+    topBusinessHeadlines = newsapi.get_top_headlines(language = "en", category = "business", country = "us")
+    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "sports", country = "us")
 
     techArticles = topTechHeadlines['articles']
     businessArticles = topBusinessHeadlines['articles']
