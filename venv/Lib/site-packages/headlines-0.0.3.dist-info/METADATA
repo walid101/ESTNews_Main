@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: headlines
+Version: 0.0.3
+Summary: Headlines for the terminal.
+Home-page: https://github.com/feluxe/headlines
+Author: Felix Meyer-Wolters
+Author-email: felix@meyerwolters.de
+Maintainer: Felix Meyer-Wolters
+Maintainer-email: felix@meyerwolters.de
+License: unlicensed
+Download-URL: https://github.com/feluxe/headlines/tarball/0.0.3
+Keywords: headlines,terminal
+Platform: 
+
+
+# headlines
+
+<small>Project created on: 2017-08-04 23:32:16
+
+### Description
+
+Headlines for the terminal.
+
+
