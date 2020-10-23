@@ -1,29 +1,30 @@
 from django.shortcuts import render
+import random
 from django.http import HttpResponse
 from newsapi import NewsApiClient
 def Headlines_view(request,*args, **kwargs):
     newsapi = NewsApiClient(api_key = "8e9afb8804be404fb277c28fb68d340c")
+    #q = "movies" or "celebrity" or "animation" or "cartoon"
     topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
-    topBusinessHeadlines = newsapi.get_top_headlines(language = "en", category = "business", country = "us")
-    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "sports", country = "us")
+    topEntertainHeadlines = newsapi.get_top_headlines(language = "en", category = "entertainment", country = "us")
+    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "sports", country = "us", q = "sports")
 
-    techArticles = topTechHeadlines['articles']
-    businessArticles = topBusinessHeadlines['articles']
+    techArticles =  topTechHeadlines['articles']
+    random.shuffle(techArticles)
+    entArticles = topEntertainHeadlines['articles']
+    random.shuffle(entArticles)
     sportsArticles = topSportsHeadlines['articles']
+    random.shuffle(sportsArticles)
 
-    #myList = {
-        #"Headline Name" : "Tesla Making Huge Strides!",
-        #"Headline Date" : "March 1st, 2001"
-    #}
     techDesc = [] #this is the techArticle description
     techNews = [] #this is the tech Article news
     techImg = [] #this is the front image of the tech article
     techUrl = []
 
-    busDesc = []
-    busNews = []
-    busImg = []
-    busUrl = []
+    entDesc = []
+    entNews = []
+    entImg = []
+    entUrl = []
 
     sportsDesc = []
     sportsNews = []
@@ -37,12 +38,12 @@ def Headlines_view(request,*args, **kwargs):
         techImg.append(currArticle['urlToImage'])
         techUrl.append(currArticle['url'])
 
-    for i in range(len(businessArticles)):
-        currArticleB = businessArticles[i]
-        busDesc.append(currArticleB['description'])
-        busNews.append(currArticleB['title'])
-        busImg.append(currArticleB['urlToImage'])
-        busUrl.append(currArticleB['url'])
+    for i in range(len(entArticles)):
+        currArticleB =entArticles[i]
+        entDesc.append(currArticleB['description'])
+        entNews.append(currArticleB['title'])
+        entImg.append(currArticleB['urlToImage'])
+        entUrl.append(currArticleB['url'])
 
     for i in range(len(sportsArticles)):
         currArticleC = sportsArticles[i]
@@ -61,11 +62,11 @@ def Headlines_view(request,*args, **kwargs):
         "techImg" : techImg,
         "techUrl" : techUrl,
     }
-    busList = {
-        "busNews":busNews,
-        "busDesc":busDesc,
-        "busImg":busImg,
-        "busUrl":busUrl,
+    entList = {
+        "entNews":entNews,
+        "entDesc":entDesc,
+        "entImg":entImg,
+        "entUrl":entUrl,
     }
     sportsList = {
         "sportsNews":sportsNews,
@@ -75,9 +76,9 @@ def Headlines_view(request,*args, **kwargs):
     }
     masterList2 = {
         "techList":techList,
-        "busList":busList,
+        "entList":entList,
         "sportsList":sportsList,
     }
-    masterList = list(zip(techList, busList, sportsList))
+    masterList = list(zip(techList, entList, sportsList))
     return render(request, "Headlines_main.html", context = masterList2)
 # Create your views here.

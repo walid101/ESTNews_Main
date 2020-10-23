@@ -64,7 +64,7 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="">Home</a></li>
           <li><a href="#about">Technology</a></li>
           <li><a href="#services">Sports</a></li>
           <li><a href="#portfolio">Entertainment</a></li>
@@ -118,12 +118,12 @@
 
           <!-- Slide 2 -->
           <!--{% static 'Headlines/assets/img/slide/slide-2.jpg' %}-->
-          <div class="carousel-item" style="background-image: url('{{busList.busImg.0}}');">
+          <div class="carousel-item" style="background-image: url('{{entList.entImg.0}}');">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Headlines on <span>Business</span></h2>
-                <p class="animate__animated animate__fadeInUp">{{busList.busDesc.0}}</p>
-                <a href="{{busList.busUrl.0}}" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                <h2 class="animate__animated animate__fadeInDown">Headlines on <span>Entertainment</span></h2>
+                <p class="animate__animated animate__fadeInUp">{{entList.entDesc.0}}</p>
+                <a href="{{entList.entUrl.0}}" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
               </div>
             </div>
           </div>
@@ -158,14 +158,16 @@
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
+    <!--
     <section id="about" class="about">
       <div class="container">
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <p>{{techImg.0}}</p>
+            <p>{{techImg.0}}</p> -->
             <!-- "{% static 'Headlines/assets/img/about.jpg' %}" -->
               <!--<p>{{techList.techUrl}}</p>-->
+    <!--
             <img src= "{% static 'Headlines/assets/img/about.jpg' %}" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
@@ -193,48 +195,51 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section>--><!-- End About Us Section -->
 
     <!-- ======= About Lists Section ======= -->
+    <section id="about" class="about">
     <section class="about-lists">
       <div class="container">
-
+          <div class="section-title">
+            <h2>Technology</h2>
+          </div>
         <div class="row no-gutters">
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
-            <span>01</span>
-            <h4>Lorem Ipsum</h4>
-            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            <span><a href="{{techList.techUrl.0}}" target="_blank">01</a></span>
+            <h4>{{techList.techNews.0|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.0|truncatechars:150}}</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>02</span>
-            <h4>Repellat Nihil</h4>
-            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+            <span><a href="{{techList.techUrl.1}}" target="_blank">02</a></span>
+            <h4>{{techList.techNews.1|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.1|truncatechars:150}}</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>03</span>
-            <h4> Ad ad velit qui</h4>
-            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+            <span><a href="{{techList.techUrl.2}}" target="_blank">03</a></span>
+            <h4>{{techList.techNews.2|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.2|truncatechars:150}}</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>04</span>
-            <h4>Repellendus molestiae</h4>
-            <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+            <span><a href="{{techList.techUrl.3}}" target="_blank">04</a></span>
+            <h4>{{techList.techNews.3|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.3|truncatechars:150}}</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
-            <span>05</span>
-            <h4>Sapiente Magnam</h4>
-            <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+            <span><a href="{{techList.techUrl.4}}" target="_blank">05</a></span>
+            <h4>{{techList.techNews.4|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.4|truncatechars:150}}</p>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
-            <span>06</span>
-            <h4>Facilis Impedit</h4>
-            <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+            <span><a href="{{techList.techUrl.5}}" target="_blank">06</a></span>
+            <h4>{{techList.techNews.5|truncatechars:15}}</h4>
+            <p>{{techList.techDesc.5|truncatechars:150}}</p>
           </div>
 
         </div>
