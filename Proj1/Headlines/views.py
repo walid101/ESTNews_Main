@@ -3,7 +3,7 @@ import random
 from django.http import HttpResponse
 from newsapi import NewsApiClient
 def Headlines_view(request,*args, **kwargs):
-    newsapi = NewsApiClient(api_key = "8e9afb8804be404fb277c28fb68d340c")
+    newsapi = NewsApiClient(api_key = "54c8a5ccbe69480fa3b3c01ecdbc7e54")
     #q = "movies" or "celebrity" or "animation" or "cartoon"
     topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
     topEntertainHeadlines = newsapi.get_top_headlines(language = "en", category = "entertainment", country = "us")
