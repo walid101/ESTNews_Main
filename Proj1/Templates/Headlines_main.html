@@ -68,7 +68,7 @@
           <li><a href="#about">Technology</a></li>
           <li><a href="#services">Sports</a></li>
           <li><a href="#servicesB">Entertainment</a></li>
-          <li><a href="#portfolio">Blog</a></li>
+          <li><a href="#portfolio">More</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -390,7 +390,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="section-title">
-          <h2>Our Portfolio</h2>
+          <h2>More News</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -398,9 +398,9 @@
           <div class="col-lg-12">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Tech</li>
+              <li data-filter=".filter-card">Sports</li>
+              <li data-filter=".filter-web">Enter.</li>
             </ul>
           </div>
         </div>
@@ -409,13 +409,14 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+              <img src="{{techList.techImg.6}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>{{techList.techNews.6|truncatechars:15}}</h4>
+                <p>{{techList.techDesc.6|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-1.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <!--data-gall="portfolioGallery"-->
+                  <a href="{{techList.techImg.6}}" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                  <a href="{{techList.techUrl.6}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -423,13 +424,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-2.jpg' %}" class="img-fluid" alt="">
+              <img src="{{entList.entImg.5}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>{{entList.entNews.5|truncatechars:15}}</h4>
+                <p>{{entList.entDesc.5|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-2.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{entList.entImg.5}}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                  <a href="{{entList.entUrl.5}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -437,13 +438,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-3.jpg' %}" class="img-fluid" alt="">
+              <img src="{{techList.techImg.8}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>{{techList.techNews.8|truncatechars:15}}</h4>
+                <p>{{techList.techDesc.8|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-3.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{techList.techImg.8}}" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                  <a href="{{techList.techUrl.8}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -451,13 +452,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-4.jpg' %}" class="img-fluid" alt="">
+              <img src="{{sportsList.sportsImg.5}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>{{sportsList.sportsNews.5|truncatechars:15}}</h4>
+                <p>{{sportsList.sportsDesc.5|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-4.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{sportsList.sportsImg.5}}" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                  <a href="{{sportsList.sportsUrl.5}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -465,13 +466,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-5.jpg' %}" class="img-fluid" alt="">
+              <img src="{{entList.entImg.6}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>{{entList.entNews.6|truncatechars:15}}</h4>
+                <p>{{entList.entDesc.6|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-5.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{entList.entImg.6}}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
+                  <a href="{{entList.entUrl.6}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -479,13 +480,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid" alt="">
+              <img src="{{techList.techImg.7}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>{{techList.techNews.7|truncatechars:15}}</h4>
+                <p>{{techList.techDesc.7|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-6.jpg' %}" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{techList.techImg.7}}" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
+                  <a href="{{techList.techUrl.7}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -493,13 +494,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid" alt="">
+              <img src="{{sportsList.sportsImg.6}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>{{sportsList.sportsNews.6|truncatechars:15}}</h4>
+                <p>{{sportsList.sportsDesc.6|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-7.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{sportsList.sportsImg.6}}" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
+                  <a href="{{sportsList.sportsUrl.6}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -507,13 +508,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">
+              <img src="{{sportsList.sportsImg.7}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>{{sportsList.sportsNews.7|truncatechars:15}}</h4>
+                <p>{{sportsList.sportsDesc.7|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-8.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{sportsList.sportsImg.7}}" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
+                  <a href="{{sportsList.sportsUrl.7}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -521,13 +522,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="{% static 'Headlines/assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">
+              <img src="{{entList.entImg.7}}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>{{entList.entNews.7|truncatechars:15}}</h4>
+                <p>{{entList.entDesc.7|truncatechars:95}}</p>
                 <div class="portfolio-links">
-                  <a href="{% static 'Headlines/assets/img/portfolio/portfolio-9.jpg' %}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="icofont-external-link"></i></a>
+                  <a href="{{entList.entImg.7}}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                  <a href="{{entList.entUrl.7}}" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
             </div>
@@ -539,6 +540,7 @@
     </section><!-- End Our Portfolio Section -->
 
     <!-- ======= Our Team Section ======= -->
+      <!--
     <section id="team" class="team">
       <div class="container">
 
@@ -616,9 +618,10 @@
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section>--><!-- End Our Team Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
+      <!--
     <section id="faq" class="faq section-bg">
       <div class="container">
 
@@ -673,9 +676,10 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section>--><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Us Section ======= -->
+      <!--
     <section id="contact" class="contact">
       <div class="container">
 
@@ -741,10 +745,11 @@
         </div>
 
       </div>
-    </section><!-- End Contact Us Section -->
+    </section>--><!-- End Contact Us Section -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+  <!--
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
@@ -801,17 +806,16 @@
         </div>
       </div>
     </div>
-
+ -->
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Mamba</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Walid Khan</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed with <a href="https://bootstrapmade.com/">Bootstrap</a>
+        <a href="https://www.djangoproject.com/">Django</a>
+        <a href="https://jquery.com/">JQuery</a>
+        <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>
       </div>
     </div>
   </footer><!-- End Footer -->
