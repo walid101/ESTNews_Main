@@ -3,7 +3,7 @@ import random
 from django.http import HttpResponse
 from newsapi import NewsApiClient
 def Headlines_view(request,*args, **kwargs):
-    newsapi = NewsApiClient(api_key = "54c8a5ccbe69480fa3b3c01ecdbc7e54")
+    newsapi = NewsApiClient(api_key = "78b9d599c4f94f8fa3afb1a5458928d6")
     #q = "movies" or "celebrity" or "animation" or "cartoon"
     topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
     topEntertainHeadlines = newsapi.get_top_headlines(language = "en", category = "entertainment", country = "us")
@@ -39,7 +39,7 @@ def Headlines_view(request,*args, **kwargs):
         techUrl.append(currArticle['url'])
 
     for i in range(len(entArticles)):
-        currArticleB =entArticles[i]
+        currArticleB = entArticles[i]
         entDesc.append(currArticleB['description'])
         entNews.append(currArticleB['title'])
         entImg.append(currArticleB['urlToImage'])
@@ -74,6 +74,19 @@ def Headlines_view(request,*args, **kwargs):
         "sportsImg":sportsImg,
         "sportsUrl":sportsUrl,
     }
+
+    #if(techList['techImg'][0] == None):
+     #   hold = techList['techImg'][0]
+      #  techList['techImg'][0] = techList['techImg'][1]
+       # techList['techImg'][1] = hold
+    #if (sportsList['sportsImg'][0] == None):
+     #   holdB = sportsList['sportsImg'][0]
+      #  sportsList['sportsImg'][0] = sportsList['sportsImg'][1]
+       # sportsList['sportsImg'][1] = holdB
+    #if (entList['entImg'][0] == None):
+     #   holdC = entList['entImg'][0]
+      #  entList['entImg'][0] = entList['entImg'][1]
+       # entList['entImg'][1] = holdC
     masterList2 = {
         "techList":techList,
         "entList":entList,
