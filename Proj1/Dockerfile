@@ -8,7 +8,7 @@ RUN pip install -r /requirements.txt
 RUN apk del .tmp
 
 RUN mkdir /Proj1
-COPY . /Proj1
+COPY Proj1 /Proj1
 WORKDIR /Proj1
 COPY scripts /scripts
 

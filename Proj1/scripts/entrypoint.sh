@@ -6,4 +6,4 @@ set e
 python manage.py collectstatic --noinput
 
 
-uwsgi --socket :8000 --master --enable-threads --module Proj1.wsgi
+uwsgi --socket :8000 --master --enable-threads --module pwd.wsgi
