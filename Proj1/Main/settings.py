@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','changeme')#'t$6wb#0n#6-4d9&*kvgq5*&=s2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['estnewsappb.herokuapp.com' , '127.0.0.1']
+ALLOWED_HOSTS = ['estnewsappb.herokuapp.com' , '127.0.0.1', 'www.est-news.com']
 ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
 if ALLOWED_HOSTS_ENV:
     ALLOWED_HOSTS.extend(ALLOWED_HOSTS_ENV.split(','))
