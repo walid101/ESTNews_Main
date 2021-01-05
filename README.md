@@ -1,5 +1,5 @@
 # ESTNews_Main
-Capital Website Project
+Capital WebApp Project
 Goal : Display a friendly UI that presents the user with information of the top headlines around the world regarding Technology, Entertainment, and Sports. The project uses the 
 NewsAPI framework and implements an efficient search algorithm to reduce load time while keeping quality and relevancy of information displayed. 
 Link: www.est-news.com
