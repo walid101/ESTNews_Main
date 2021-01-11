@@ -7,7 +7,7 @@ def Headlines_view(request,*args, **kwargs):
     #q = "movies" or "celebrity" or "animation" or "cartoon"
     topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
     topEntertainHeadlines = newsapi.get_top_headlines(language = "en", category = "entertainment", country = "us")
-    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "sports", country = "us", q = "sports")
+    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "stocks", country = "us", q = "sports")
 
     techArticles =  topTechHeadlines['articles']
     random.shuffle(techArticles)
