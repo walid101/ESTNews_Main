@@ -3,11 +3,11 @@ import random
 from django.http import HttpResponse
 from newsapi import NewsApiClient
 def Headlines_view(request,*args, **kwargs):
-    newsapi = NewsApiClient(api_key = "78b9d599c4f94f8fa3afb1a5458928d6")
+    newsapi = NewsApiClient(api_key = "71e591475a7246dfa7c6aa3915c9798a")
     #q = "movies" or "celebrity" or "animation" or "cartoon"
     topTechHeadlines = newsapi.get_top_headlines(language = "en", category = "technology", country = "us")
     topEntertainHeadlines = newsapi.get_top_headlines(language = "en", category = "entertainment", country = "us")
-    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "stocks", country = "us", q = "sports")
+    topSportsHeadlines = newsapi.get_top_headlines( language = "en", category = "sports", country = "us", q = "sports")
 
     techArticles =  topTechHeadlines['articles']
     random.shuffle(techArticles)
